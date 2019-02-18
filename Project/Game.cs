@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System;
-using CastleGrimtol.Project;
 //using static CastleGrimtol.Project.Story;
                           
 namespace CastleGrimtol.Project
@@ -85,7 +84,7 @@ namespace CastleGrimtol.Project
         }
 
      //method to handle moving between rooms:
-    public void moveRoom(string direction)
+    public void MoveRoom(string direction)
     {  
          //   string nextRoom;
          if (CurrentRoom.exits.TryGetValue(direction, out Room nextRoom))
@@ -93,7 +92,7 @@ namespace CastleGrimtol.Project
                 CurrentRoom = nextRoom;
                 if (CurrentRoom.Name == "RabbitRoom")
                     {
-                    if (!CurrentPlayer.Inventory.Exists(i => i.Name == "key")
+                    if (!CurrentPlayer.Inventory.Exists(i => i.Name == "key"))
                         {
                         //string tempz = CurrentPlayer.Inventory.Find("key");
                         Loser();
@@ -244,7 +243,7 @@ Commands:
 
         public void Winning()
         {
-            Console.WriteLine("Congratulations!!! you have excaped from the horrors of the LITTLE SHOP of Hasenpfeffer");
+            Console.WriteLine("Congratulations!!! you have escaped from the horrors of the LITTLE SHOP of Hasenpfeffer");
             Console.WriteLine("Would you like to play again? Y/N");
             string again = Console.ReadLine().ToLower();
             if (again == "y" || again == "yes")

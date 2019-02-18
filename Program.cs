@@ -47,7 +47,7 @@ namespace CastleGrimtol
 
                 if (userSelection[0] == "g" || userSelection[0] == "go")
                 {
-                    game.moveRoom(userSelection[1]);
+                    game.MoveRoom(userSelection[1]);
                     Console.WriteLine(game.CurrentRoom.Description);
                 }
 
