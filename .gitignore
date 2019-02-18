@@ -3,6 +3,8 @@
 project.lock.json
 .DS_Store
 *.pyc
+readme.md.org
+
 
 # Visual Studio Code
 .vscode
